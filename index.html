@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OptimaX.GI — General Intelligence Services, Automation & Transformation</title>
+<meta name="description" content="OptimaX.GI delivers AI Services, Automation & Transformation — from personal productivity agents to enterprise-scale platforms that redefine how businesses operate.">
+<meta name="keywords" content="AI services, AI automation, enterprise AI, personal AI agents, AI transformation, general intelligence, OptimaX GI">
+<meta name="author" content="OptimaX.GI">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="yqEBUKNi21ifJyb86I_o6C_N2KT-TbgwDqq7-A6FXcY" />
+
+<!-- Open Graph / LinkedIn / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://optimax-gi.net/">
+<meta property="og:title" content="OptimaX.GI — Intelligence Without Limits">
+<meta property="og:description" content="AI Services, Automation & Transformation — from personal productivity agents to enterprise-scale platforms that redefine how businesses operate.">
+<meta property="og:image" content="https://optimax-gi.net/optimax-gi-logo.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://optimax-gi.net/">
+<meta name="twitter:title" content="OptimaX.GI — Intelligence Without Limits">
+<meta name="twitter:description" content="AI Services, Automation & Transformation — from personal productivity agents to enterprise-scale platforms that redefine how businesses operate.">
+<meta name="twitter:image" content="https://optimax-gi.net/optimax-gi-logo.png">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://optimax-gi.net/">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0EX7092TXT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0EX7092TXT');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0A0A0C;
+  --deep: #111118;
+  --surface: #16161E;
+  --card: #1C1C28;
+  --border: #2A2A3A;
+  --muted: #6B6B80;
+  --text: #C8C8D8;
+  --light: #E8E8F0;
+  --white: #F5F5FA;
+  --accent: #00E5A0;
+  --accent2: #00C8FF;
+  --accent3: #8B5CF6;
+  --warm: #FF6B35;
+  --gold: #FFD700;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--black);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NOISE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── NAVIGATION ── */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  background: rgba(10, 10, 12, 0.7);
+  border-bottom: 1px solid rgba(42, 42, 58, 0.4);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 46px;
+  height: 46px;
+}
+
+.logo-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--white);
+  letter-spacing: -0.5px;
+}
+
+.logo-text .gi {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.logo-text .dot {
+  color: var(--accent2);
+}
+
+.logo-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: -2px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+  align-items: center;
+}
+
+nav ul li a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover { color: var(--white); }
+
+.nav-cta {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: var(--black) !important;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s, box-shadow 0.3s !important;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 229, 160, 0.3);
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 140px 48px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(0, 229, 160, 0.06) 0%, rgba(0, 200, 255, 0.03) 40%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(42, 42, 58, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 42, 58, 0.15) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 70%);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  animation: fadeDown 0.8s ease-out;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+.hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 1.05;
+  color: var(--white);
+  letter-spacing: -3px;
+  max-width: 900px;
+  animation: fadeUp 1s ease-out 0.2s both;
+}
+
+.hero h1 .gradient {
+  background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  font-size: 19px;
+  color: var(--muted);
+  max-width: 600px;
+  line-height: 1.7;
+  margin-top: 28px;
+  font-weight: 400;
+  animation: fadeUp 1s ease-out 0.4s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 48px;
+  animation: fadeUp 1s ease-out 0.6s both;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #00D4B0);
+  color: var(--black);
+  padding: 16px 36px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 229, 160, 0.25);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--light);
+  padding: 16px 36px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(0, 229, 160, 0.05);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 60px;
+  margin-top: 80px;
+  animation: fadeUp 1s ease-out 0.8s both;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-val {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: var(--white);
+  letter-spacing: -1px;
+}
+
+.stat-val .highlight { color: var(--accent); }
+
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 6px;
+}
+
+/* ── SECTION COMMON ── */
+section {
+  padding: 120px 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--white);
+  letter-spacing: -1.5px;
+  line-height: 1.15;
+  max-width: 700px;
+}
+
+.section-desc {
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-top: 20px;
+}
+
+/* ── SERVICES GRID ── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px 32px;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.service-card:hover {
+  border-color: rgba(0, 229, 160, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.service-card:hover::before { opacity: 1; }
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(0, 229, 160, 0.08);
+  border: 1px solid rgba(0, 229, 160, 0.15);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.service-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--white);
+  letter-spacing: -0.3px;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  font-size: 14.5px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.service-tag {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  background: rgba(0, 229, 160, 0.06);
+  border: 1px solid rgba(0, 229, 160, 0.12);
+  border-radius: 6px;
+}
+
+/* ── PHASED ROADMAP ── */
+.roadmap {
+  background: var(--deep);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  padding: 80px 64px;
+  margin-top: 64px;
+}
+
+.phases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 48px;
+  position: relative;
+}
+
+.phases::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 56px;
+  right: 56px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3), var(--warm));
+  opacity: 0.3;
+}
+
+.phase {
+  text-align: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.phase-dot {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--black);
+  position: relative;
+  z-index: 2;
+}
+
+.phase:nth-child(1) .phase-dot { background: var(--accent); }
+.phase:nth-child(2) .phase-dot { background: var(--accent2); }
+.phase:nth-child(3) .phase-dot { background: var(--accent3); color: var(--white); }
+.phase:nth-child(4) .phase-dot { background: var(--warm); }
+
+.phase h4 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.phase p {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.phase-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 14px;
+  display: block;
+}
+
+.phase:nth-child(1) .phase-label { color: var(--accent); }
+.phase:nth-child(2) .phase-label { color: var(--accent2); }
+.phase:nth-child(3) .phase-label { color: var(--accent3); }
+.phase:nth-child(4) .phase-label { color: var(--warm); }
+
+/* ── PRODUCTS / PLATFORMS ── */
+.offerings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 64px;
+}
+
+.offering-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.offering-card::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0.04;
+}
+
+.offering-card:nth-child(1)::after { background: var(--accent); }
+.offering-card:nth-child(2)::after { background: var(--accent2); }
+.offering-card:nth-child(3)::after { background: var(--accent3); }
+.offering-card:nth-child(4)::after { background: var(--warm); }
+
+.offering-card .tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 6px;
+}
+
+.offering-card:nth-child(1) .tag { color: var(--accent); background: rgba(0,229,160,0.08); }
+.offering-card:nth-child(2) .tag { color: var(--accent2); background: rgba(0,200,255,0.08); }
+.offering-card:nth-child(3) .tag { color: var(--accent3); background: rgba(139,92,246,0.08); }
+.offering-card:nth-child(4) .tag { color: var(--warm); background: rgba(255,107,53,0.08); }
+
+.offering-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.offering-card p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.offering-features {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.offering-features span {
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--light);
+}
+
+/* ── AI-DOME FEATURE ── */
+.ai-dome {
+  background: linear-gradient(135deg, rgba(0, 229, 160, 0.03), rgba(139, 92, 246, 0.03));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 80px 64px;
+  margin-top: 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-dome::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.06), transparent 60%);
+}
+
+.ai-dome h2 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 4.5vw, 56px);
+  letter-spacing: -2px;
+  color: var(--white);
+  position: relative;
+}
+
+.ai-dome h2 .glow {
+  background: linear-gradient(135deg, var(--accent3), var(--warm), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ai-dome > p {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 550px;
+  margin: 20px auto 0;
+  line-height: 1.7;
+  position: relative;
+}
+
+.dome-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  position: relative;
+}
+
+.dome-feature {
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.dome-feature h4 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.dome-feature p {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── CTA ── */
+.cta-section {
+  text-align: center;
+  padding: 120px 48px 140px;
+}
+
+.cta-section h2 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 5vw, 60px);
+  letter-spacing: -2px;
+  color: var(--white);
+  line-height: 1.1;
+}
+
+.cta-section h2 .gradient {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-section p {
+  font-size: 18px;
+  color: var(--muted);
+  margin-top: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.cta-actions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 60px 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 12px;
+  max-width: 300px;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-col h5 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--light);
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.footer-col a:hover { color: var(--accent); }
+
+.footer-bottom {
+  text-align: center;
+  padding: 24px 48px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .phases { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .phases::before { display: none; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 16px 24px; }
+  nav ul { display: none; }
+  .hero { padding: 120px 24px 60px; }
+  section { padding: 80px 24px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .offerings { grid-template-columns: 1fr; }
+  .phases { grid-template-columns: 1fr; }
+  .dome-features { grid-template-columns: 1fr; }
+  .hero-stats { gap: 32px; flex-wrap: wrap; justify-content: center; }
+  .roadmap { padding: 48px 28px; }
+  .ai-dome { padding: 48px 28px; }
+  footer { flex-direction: column; gap: 40px; }
+  .hero-actions { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ NAV ═══════ -->
+<nav>
+  <a href="#" class="logo">
+    <svg class="logo-mark" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00E5A0"/>
+          <stop offset="50%" stop-color="#00C8FF"/>
+          <stop offset="100%" stop-color="#8B5CF6"/>
+        </linearGradient>
+      </defs>
+      <!-- Outer ring -->
+      <circle cx="23" cy="23" r="21" fill="none" stroke="url(#lg1)" stroke-width="2"/>
+      <!-- Inner neural pattern -->
+      <circle cx="23" cy="14" r="3" fill="#00E5A0"/>
+      <circle cx="14" cy="28" r="3" fill="#00C8FF"/>
+      <circle cx="32" cy="28" r="3" fill="#8B5CF6"/>
+      <circle cx="23" cy="23" r="4" fill="url(#lg1)"/>
+      <!-- Connections -->
+      <line x1="23" y1="14" x2="23" y2="23" stroke="#00E5A0" stroke-width="1.5" opacity="0.6"/>
+      <line x1="14" y1="28" x2="23" y2="23" stroke="#00C8FF" stroke-width="1.5" opacity="0.6"/>
+      <line x1="32" y1="28" x2="23" y2="23" stroke="#8B5CF6" stroke-width="1.5" opacity="0.6"/>
+      <line x1="23" y1="14" x2="14" y2="28" stroke="url(#lg1)" stroke-width="1" opacity="0.3"/>
+      <line x1="23" y1="14" x2="32" y2="28" stroke="url(#lg1)" stroke-width="1" opacity="0.3"/>
+      <line x1="14" y1="28" x2="32" y2="28" stroke="url(#lg1)" stroke-width="1" opacity="0.3"/>
+    </svg>
+    <div>
+      <span class="logo-text">OptimaX<span class="dot">.</span><span class="gi">GI</span></span>
+      <span class="logo-sub">General Intelligence</span>
+    </div>
+  </a>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#ai-dome">AI-Dome</a></li>
+    <li><a href="#contact" class="nav-cta">Get Started</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-badge">Now Launching • 2026</div>
+  <h1>Intelligence<br><span class="gradient">Without Limits</span></h1>
+  <p class="hero-sub">AI Services, Automation & Transformation — from personal productivity agents to enterprise-scale platforms that redefine how businesses operate.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Start Your AI Journey →</a>
+    <a href="#services" class="btn-secondary">Explore Services</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-val"><span class="highlight">4</span></div>
+      <div class="stat-label">Service Pillars</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">∞</div>
+      <div class="stat-label">Use Cases</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val"><span class="highlight">1</span></div>
+      <div class="stat-label">Unified Vision</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ SERVICES ═══════ -->
+<section id="services">
+  <div class="section-label">// What We Do</div>
+  <h2 class="section-title">AI Services Engineered for the Next Era</h2>
+  <p class="section-desc">From trend synthesis to agentic solutions — we build the intelligence layer your life and business need to thrive.</p>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon">🔬</div>
+      <h3>AI Trend Synthesis</h3>
+      <p>Constant scanning of the most transformative technologies in compute and AI applications — distilled into actionable insights for disruptive business models and revenue growth.</p>
+      <span class="service-tag">Advisory</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">🤖</div>
+      <h3>Personal AI Agents</h3>
+      <p>Custom-built AI agents for individual productivity — from workflow automation to intelligent assistants that learn your patterns and amplify your output.</p>
+      <span class="service-tag">Individual</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">🏢</div>
+      <h3>Enterprise Agentic Solutions</h3>
+      <p>End-to-end AI solutions for SMBs — increasing productivity, improving quality, boosting profitability across industry verticals and service sectors.</p>
+      <span class="service-tag">Business</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">🧠</div>
+      <h3>AI App Ecosystem</h3>
+      <p>A growing library of specialized AI applications built from real-world engagements — packaged as reusable, configurable products for rapid deployment.</p>
+      <span class="service-tag">Products</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">🎯</div>
+      <h3>Expert AI Platforms</h3>
+      <p>Specialized AI experts that stay current and personalized — behavioral therapists, scientific advisors, sports consultants, and more, at a fraction of the cost.</p>
+      <span class="service-tag">Platform</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">✨</div>
+      <h3>Personalization Engine</h3>
+      <p>Deep personalization covering human psychology, personality traits, values, aspirations — including spirituality, mysticism, and predictive models.</p>
+      <span class="service-tag">Core Tech</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ ROADMAP ═══════ -->
+<section id="roadmap">
+  <div class="roadmap reveal">
+    <div class="section-label">// Phased Approach</div>
+    <h2 class="section-title">From Ground Zero to General Intelligence</h2>
+    <p class="section-desc">A deliberate, self-funding journey — each phase builds the foundation for the next.</p>
+
+    <div class="phases">
+      <div class="phase">
+        <div class="phase-dot">A</div>
+        <h4>Services</h4>
+        <p>AI trend synthesis, personal agents, and enterprise agentic solutions. Revenue from day one.</p>
+        <span class="phase-label">Launch → Now</span>
+      </div>
+      <div class="phase">
+        <div class="phase-dot">B</div>
+        <h4>Products</h4>
+        <p>Package AI apps and service models into personalized, secure, trainable products.</p>
+        <span class="phase-label">Build → 12 mo</span>
+      </div>
+      <div class="phase">
+        <div class="phase-dot">C</div>
+        <h4>Platforms</h4>
+        <p>Specialized AI expert platforms — always current, deeply personalized, minimal effort to customize.</p>
+        <span class="phase-label">Scale → 24 mo</span>
+      </div>
+      <div class="phase">
+        <div class="phase-dot">D</div>
+        <h4>AI-as-a-Service</h4>
+        <p>AI-Dome experiences and the Universal Business Application — launched when market is ready.</p>
+        <span class="phase-label">Transform → 36 mo+</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PRODUCTS & PLATFORMS ═══════ -->
+<section id="products">
+  <div class="section-label">// Products & Platforms</div>
+  <h2 class="section-title">The OptimaX.GI Ecosystem</h2>
+  <p class="section-desc">Personalized AI that understands who you are — not just what you do.</p>
+
+  <div class="offerings">
+    <div class="offering-card reveal">
+      <span class="tag">Products</span>
+      <h3>AI App Collections</h3>
+      <p>Curated bundles of AI applications with built-in personalization, custom training, and security of choice. Designed to adapt to individual psychology, personality, and values.</p>
+      <div class="offering-features">
+        <span>Personalization</span>
+        <span>Custom Training</span>
+        <span>Security</span>
+        <span>Companion AI</span>
+      </div>
+    </div>
+    <div class="offering-card reveal">
+      <span class="tag">Platform</span>
+      <h3>Expert AI Network</h3>
+      <p>Access specialized AI experts — behavioral therapists, spiritual guides, scientific advisors, sports consultants, political strategists — always current, deeply personal.</p>
+      <div class="offering-features">
+        <span>Auto-Updated</span>
+        <span>Easy Setup</span>
+        <span>Personalized</span>
+        <span>Expert-Level</span>
+      </div>
+    </div>
+    <div class="offering-card reveal">
+      <span class="tag">Spiritual & Predictive</span>
+      <h3>Inner Intelligence</h3>
+      <p>AI-powered insights into spirituality, mysticism, astrology, numerology, and future predictions — respectfully blended with data science and ancient wisdom traditions.</p>
+      <div class="offering-features">
+        <span>Astrology</span>
+        <span>Numerology</span>
+        <span>Personality</span>
+        <span>Predictions</span>
+      </div>
+    </div>
+    <div class="offering-card reveal">
+      <span class="tag">Enterprise</span>
+      <h3>Universal Business OS</h3>
+      <p>One application for ALL business processes — industry-agnostic, NLM-powered I/O, self-generating workflows, object-oriented, self-improving through observation.</p>
+      <div class="offering-features">
+        <span>NLM I/O</span>
+        <span>Smart Data</span>
+        <span>Self-Learning</span>
+        <span>Configurable</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ AI-DOME ═══════ -->
+<section id="ai-dome">
+  <div class="ai-dome reveal">
+    <div class="section-label">// The Future</div>
+    <h2>The <span class="glow">AI-Dome</span> Experience</h2>
+    <p>An immersive, session-based AI environment — like a spa for your mind. A safe space for relaxation, emotional easing, inner reflection, and personal transformation.</p>
+
+    <div class="dome-features">
+      <div class="dome-feature">
+        <h4>🫧 Emotional Sanctuary</h4>
+        <p>A private, secure space to share personal and sensitive thoughts with AI that truly listens and supports.</p>
+      </div>
+      <div class="dome-feature">
+        <h4>🧘 Session-Based</h4>
+        <p>Book sessions like a spa — structured experiences for relaxation, introspection, and emotional wellness.</p>
+      </div>
+      <div class="dome-feature">
+        <h4>🔮 Deep Personalization</h4>
+        <p>AI that knows your emotional patterns, values, and aspirations — evolving with you over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA ═══════ -->
+<section class="cta-section" id="contact">
+  <h2>Ready to Build the<br><span class="gradient">Future of Intelligence?</span></h2>
+  <p>Whether you're seeking AI advisory, personal agents, or enterprise transformation — we're here to launch your next chapter.</p>
+  <div class="cta-actions">
+    <a href="mailto:Support@Optima-XGI.net" class="btn-primary">Contact Us →</a>
+    <a href="#services" class="btn-secondary">Learn More</a>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="footer-brand">
+    <div class="logo" style="margin-bottom: 8px;">
+      <svg class="logo-mark" viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+        <circle cx="23" cy="23" r="21" fill="none" stroke="url(#lg1)" stroke-width="2"/>
+        <circle cx="23" cy="14" r="3" fill="#00E5A0"/>
+        <circle cx="14" cy="28" r="3" fill="#00C8FF"/>
+        <circle cx="32" cy="28" r="3" fill="#8B5CF6"/>
+        <circle cx="23" cy="23" r="4" fill="url(#lg1)"/>
+        <line x1="23" y1="14" x2="23" y2="23" stroke="#00E5A0" stroke-width="1.5" opacity="0.6"/>
+        <line x1="14" y1="28" x2="23" y2="23" stroke="#00C8FF" stroke-width="1.5" opacity="0.6"/>
+        <line x1="32" y1="28" x2="23" y2="23" stroke="#8B5CF6" stroke-width="1.5" opacity="0.6"/>
+      </svg>
+      <span class="logo-text" style="font-size:18px;">OptimaX<span class="dot">.</span><span class="gi">GI</span></span>
+    </div>
+    <p>General Intelligence Services, Automation & Transformation. Building the future of AI — one phase at a time.</p>
+  </div>
+  <div class="footer-links">
+    <div class="footer-col">
+      <h5>Services</h5>
+      <a href="#services">AI Advisory</a>
+      <a href="#services">Personal Agents</a>
+      <a href="#services">Enterprise AI</a>
+    </div>
+    <div class="footer-col">
+      <h5>Offerings</h5>
+      <a href="#products">Products</a>
+      <a href="#products">Platforms</a>
+      <a href="#ai-dome">AI-Dome</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#contact">Contact</a>
+      <a href="#">Careers</a>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  © 2026 OptimaX.GI — General Intelligence Services, Automation & Transformation. All rights reserved.
+</div>
+
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</body>
+</html>
